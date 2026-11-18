@@ -26,7 +26,7 @@ Frames `1:2` (0%) and `3:2470` (100%) are **one page in two states**. The bar fi
 | File | Layer / use | Natural px |
 |---|---|---|
 | `landing-bg.png` | BACKGROUND swirls 3:500 + star group 3:505, transparent | 1920x1080 |
-| `character.png` | mascot `charecter` 1:4 | 394x427 |
+| `character.gif` | mascot `charecter` 1:4 (animated, 31 frames, loops) | 788x854 |
 | `back.png` | back arrow, Layer 3:2958 (100% state only) | 55x55 |
 | `stage-spacer.png` | transparent, 1920x1080 | 1920x1080 |
 
@@ -83,7 +83,7 @@ Vertical % measured from y=0.
       3.1.1- width `100%`, height auto, `landing-bg.png`, left 0 top 0
 
     3.2- charecter — centred mascot
-      3.2.1- width `20.52%` (394px), height auto, `character.png`
+      3.2.1- width `20.52%` (394px), height auto, `character.gif`
       3.2.2- left `39.74%` (763px), top `31.02%` (335px)
 
     3.3- PATIENCE title

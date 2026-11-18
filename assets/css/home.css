@@ -53,6 +53,18 @@
     75%, 100% { transform: translateX(0); }
 }
 
+/* the cowboy's hat touches the blonde slightly before the swing ends, so her face turns on contact */
+
+.pendulum-blonde .pendulum-face-sprite {
+    animation-name: face-turn-blonde;
+}
+
+@keyframes face-turn-blonde {
+    0%, 22.4% { transform: translateX(0); }
+    22.5%, 74.9% { transform: translateX(-50%); }
+    75%, 100% { transform: translateX(0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .pendulum-face-sprite {
         animation: none;
@@ -213,6 +225,10 @@
     animation: spring-hit 1.8s ease-out infinite;
 }
 
+.pendulum-blonde {
+    animation-name: spring-hit-blonde;
+}
+
 .pendulum-dog {
     animation-delay: 0.018s;
 }
@@ -236,6 +252,20 @@
     32% { transform: translateX(0.09vw); }
     34.5% { transform: translateX(-0.03vw); }
     37%, 75% { transform: translateX(0); }
+    77% { transform: translateX(-0.3vw); }
+    79.5% { transform: translateX(0.18vw); }
+    82% { transform: translateX(-0.09vw); }
+    84.5% { transform: translateX(0.03vw); }
+    87%, 100% { transform: translateX(0); }
+}
+
+@keyframes spring-hit-blonde {
+    0%, 22.5% { transform: translateX(0); }
+    24.5% { transform: translateX(0.3vw); }
+    27% { transform: translateX(-0.18vw); }
+    29.5% { transform: translateX(0.09vw); }
+    32% { transform: translateX(-0.03vw); }
+    34.5%, 75% { transform: translateX(0); }
     77% { transform: translateX(-0.3vw); }
     79.5% { transform: translateX(0.18vw); }
     82% { transform: translateX(-0.09vw); }
