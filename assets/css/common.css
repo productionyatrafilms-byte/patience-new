@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "Irish Grover";
+    src: url("../../fonts/IrishGrover-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Baloo 2";
+    src: url("../../fonts/Baloo2-Variable.ttf") format("truetype");
+    font-weight: 400 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ITF Devanagari";
+    src: url("../../fonts/ITFDevanagari.ttc") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans Gujarati";
+    src: url("../../fonts/NotoSansGujarati-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ITF Devanagari";
+    src: url("../../fonts/ITFDevanagari-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans Gujarati";
+    src: url("../../fonts/NotoSansGujarati-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --accent-purple: #9274b7;
+    --title-orange: #f27100;
+}
+
+/* ---------- Language pill (Lag 3:2913, 153 x 57) ---------- */
+
+#langSelect {
+    top: 2.3958vw;
+    right: 3.5417vw;
+}
+
+#langSelect #language {
+    width: 8.3333vw;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 0.1042vw solid var(--accent-purple);
+    border-radius: 12.6042vw;
+    padding: 0.3646vw 0.4688vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#langSelect #language label {
+    padding: 0;
+}
+
+#langSelect #language label span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.0833vw;
+    height: auto;
+    aspect-ratio: 1;
+    padding: 0;
+    border: 0.1042vw solid var(--accent-purple);
+    border-radius: 50%;
+    overflow: visible;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.875vw;
+    font-weight: 700;
+    line-height: 2.0833vw;
+    color: var(--accent-purple);
+}
+
+#langSelect #language input:checked + span {
+    background-color: rgba(146, 116, 183, 0.35);
+    color: var(--accent-purple);
+}
+
+/* ---------- Back button (Layer 3:2958) ---------- */
+
+.back-btn {
+    position: absolute;
+    left: 3.5156%;
+    top: 4.8611%;
+    width: 2.8469%;
+    height: auto;
+    line-height: 0;
+    z-index: 10;
+}
+
+.back-btn-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Shared title ---------- */
+
+.page-title {
+    position: absolute;
+    left: 27.2917%;
+    top: 6.0185%;
+    width: 45.4167%;
+    height: auto;
+    margin: 0;
+    font-family: "Irish Grover", sans-serif;
+    font-weight: 400;
+    font-size: 10.4167vw;
+    line-height: 12.5938vw;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--title-orange);
+}
+
+/* ---------- Hindi and Gujarati text needs fonts that carry those scripts ---------- */
+
+.hindi {
+    font-family: "ITF Devanagari", "Nirmala UI", "Mangal", sans-serif;
+    font-weight: 700;
+}
+
+.gujrati {
+    font-family: "Noto Sans Gujarati", "Nirmala UI", "Shruti", sans-serif;
+    font-weight: 700;
+}
+
+/* ---------- Language toggle always uses Baloo 2, whatever the language ---------- */
+
+#langSelect,
+#langSelect * {
+    font-family: "Baloo 2", sans-serif;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patience - Pranam</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/topic.css">
+    <link rel="stylesheet" href="./assets/css/pranam.css">
+</head>
+
+<body id="body">
+
+    <div id="langSelect">
+        <div id="language">
+            <label><input type="radio" onclick="val('English')" name="lang" id="en" value="English">
+                <span>E</span>
+            </label>
+            <label><input type="radio" onclick="val('Hindi')" name="lang" id="hi" value="Hindi">
+                <span>H</span>
+            </label>
+            <label><input type="radio" onclick="val('Gujrati')" name="lang" id="gu" value="Gujrati">
+                <span>G</span>
+            </label>
+        </div>
+    </div>
+
+    <img class="page-bg" src="./assets/images/background.png" alt="">
+
+    <div class="main-container">
+        <div class="stage">
+            <img class="stage-spacer" src="./assets/images/stage-spacer.png" alt="">
+
+            <img class="define-bg" src="./assets/images/define-bg.png" alt="">
+
+
+
+            <a class="back-btn" href="./how.html">
+                <img class="back-btn-image" src="./assets/images/back.png" alt="Back">
+            </a>
+
+            <div class="stage-item pranam-card">
+                <img src="./assets/images/pranam-card.png" alt="">
+            </div>
+
+            <div class="stage-item pranam-disc"></div>
+            <div class="stage-item pranam-ring"></div>
+
+            <div class="stage-item pranam-video">
+                <img class="pranam-video-sizer" src="./assets/images/pranam-video-sizer.png" alt="">
+                <video src="./assets/videos/pranam.mp4" preload="auto" autoplay muted loop playsinline></video>
+            </div>
+
+            <h1 class="stage-item pranam-title" data-text="pranamTitle"></h1>
+
+            <a class="stage-item home-pill" href="./home.html">
+                <img src="./assets/images/pranam-home.png" alt="">
+                <span class="home-pill-label" data-text="pranamHome"></span>
+            </a>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/text.js"></script>
+    <script src="./assets/js/pranam.js"></script>
+</body>
+
+</html>

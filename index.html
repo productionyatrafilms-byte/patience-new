@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patience</title>
+    <link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body id="body">
+
+    <div id="langSelect">
+        <div id="language">
+            <label><input type="radio" onclick="val('English')" name="lang" id="en" value="English">
+                <span>E</span>
+            </label>
+            <label><input type="radio" onclick="val('Hindi')" name="lang" id="hi" value="Hindi">
+                <span>H</span>
+            </label>
+            <label><input type="radio" onclick="val('Gujrati')" name="lang" id="gu" value="Gujrati">
+                <span>G</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="stage" id="stage">
+            <img class="stage-spacer" src="./assets/images/stage-spacer.png" alt="">
+
+            <img class="landing-bg" src="./assets/images/landing-bg.png" alt="">
+
+            <img class="landing-mascot" src="./assets/images/character.png" alt="Patience mascot, an orange with a laptop">
+
+            <h1 class="page-title landing-title" data-text="patience"></h1>
+
+            <p class="landing-status" data-text="loading"></p>
+
+            <div class="progress">
+                <div class="progress-bar" id="progressBar">
+                    <span class="progress-segment progress-segment-start"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment"></span>
+                    <span class="progress-segment progress-segment-end"></span>
+                </div>
+                <p class="progress-percent" id="progressPercent">0%</p>
+            </div>
+
+            <a class="back-btn" href="./index.html">
+                <img class="back-btn-image" src="./assets/images/back.png" alt="Back">
+            </a>
+        </div>
+    </div>
+
+    <script src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/jquery-3.7.1.js"></script>
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/text.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+/* home.html - Newton's cradle (frames 7:488 and 18:2044) */
+
+:root {
+    --title-shadow: #414141;
+    --card-fill: #ffefd4;
+    --card-border: #ffb2aa;
+    --card-text: #000000;
+}
+
+.home-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home-title {
+    text-shadow: 0.1562vw 0.2604vw 0 var(--title-shadow);
+}
+
+.pendulum-item {
+    position: absolute;
+    height: auto;
+    line-height: 0;
+}
+
+.pendulum-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pendulum-face {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.pendulum-face-sprite {
+    width: 200%;
+    max-width: none;
+    height: auto;
+    display: block;
+    animation: face-turn 1.8s step-end infinite;
+}
+
+@keyframes face-turn {
+    0%, 24.9% { transform: translateX(0); }
+    25%, 74.9% { transform: translateX(-50%); }
+    75%, 100% { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pendulum-face-sprite {
+        animation: none;
+    }
+}
+
+.question-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--card-fill);
+    border: 0.3125vw solid var(--card-border);
+    border-radius: 2.2917vw;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: var(--card-text);
+    background-image: radial-gradient(closest-side, #ffffff 99.5%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0% 0%;
+    transition: background-size 0.7s cubic-bezier(0.22, 0.75, 0.25, 1);
+}
+
+.question-card:hover,
+.question-card:focus-visible {
+    background-size: 150% 150%;
+}
+
+.question-text {
+    text-wrap: balance;
+    display: block;
+    width: 100%;
+}
+
+.pendulum-blonde {
+    left: 20.9375%;
+    top: -48.1481%;
+    width: 12.6042%;
+}
+
+.pendulum-blonde .question-card {
+    left: 7.8512%;
+    top: 84.3961%;
+    width: 84.2975%;
+    padding: 2.8385vw 0.6771vw;
+    font-size: 1.875vw;
+    line-height: 2.25vw;
+}
+
+.pendulum-dog {
+    left: 31.6146%;
+    top: -53.2407%;
+    width: 14.5833%;
+}
+
+.pendulum-dog .question-card {
+    left: 13.5714%;
+    top: 85.4388%;
+    width: 72.8571%;
+    padding: 1.9688vw 0.625vw;
+    font-size: 1.875vw;
+    line-height: 2.25vw;
+}
+
+.pendulum-moustache {
+    left: 43.125%;
+    top: -50.1852%;
+    width: 15.8854%;
+}
+
+.pendulum-moustache .question-card {
+    left: 14%;
+    top: 84.5683%;
+    width: 72%;
+    padding: 1.3464vw 0.3vw;
+    font-size: 1.875vw;
+    line-height: 2.25vw;
+}
+
+.pendulum-pig {
+    left: 54.6875%;
+    top: -49.1667%;
+    width: 15.8854%;
+}
+
+.pendulum-pig .question-card {
+    left: 16.7213%;
+    top: 84.0245%;
+    width: 66.8852%;
+    padding: 1.9635vw 0.6771vw;
+    font-size: 1.875vw;
+    line-height: 2.25vw;
+}
+
+.pendulum-cat {
+    left: 67.6562%;
+    top: -37.5%;
+    width: 12.9167%;
+}
+
+.pendulum-cat .question-card {
+    left: 10.4839%;
+    top: 82.3593%;
+    width: 79.0323%;
+    padding: 2.8516vw 0.638vw;
+    font-size: 1.875vw;
+    line-height: 2.25vw;
+}
+
+.cradle-boy {
+    position: absolute;
+    left: 8.125%;
+    top: 0;
+    width: 14.6354%;
+    height: auto;
+    display: block;
+    transform-origin: 50% -1.8268%;
+    animation: cradle-boy 1.8s infinite;
+}
+
+.cradle-girl {
+    position: absolute;
+    left: 78.8542%;
+    top: 0;
+    width: 13.3854%;
+    height: auto;
+    display: block;
+    transform-origin: 50% -1.1333%;
+    animation: cradle-girl 1.8s infinite;
+}
+
+@keyframes cradle-boy {
+    0%, 5% { transform: rotate(15deg); animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); }
+    25%, 75% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); }
+    95%, 100% { transform: rotate(15deg); }
+}
+
+@keyframes cradle-girl {
+    0%, 25% { transform: rotate(0deg); animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); }
+    45%, 55% { transform: rotate(-15deg); animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); }
+    75%, 100% { transform: rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cradle-boy,
+    .cradle-girl {
+        animation: none;
+    }
+}
+
+/* spring wobble right after each hit, rippling from the hit side */
+
+.pendulum-item {
+    animation: spring-hit 1.8s ease-out infinite;
+}
+
+.pendulum-dog {
+    animation-delay: 0.018s;
+}
+
+.pendulum-moustache {
+    animation-delay: 0.036s;
+}
+
+.pendulum-pig {
+    animation-delay: 0.054s;
+}
+
+.pendulum-cat {
+    animation-delay: 0.072s;
+}
+
+@keyframes spring-hit {
+    0%, 25% { transform: translateX(0); }
+    27% { transform: translateX(0.3vw); }
+    29.5% { transform: translateX(-0.18vw); }
+    32% { transform: translateX(0.09vw); }
+    34.5% { transform: translateX(-0.03vw); }
+    37%, 75% { transform: translateX(0); }
+    77% { transform: translateX(-0.3vw); }
+    79.5% { transform: translateX(0.18vw); }
+    82% { transform: translateX(-0.09vw); }
+    84.5% { transform: translateX(0.03vw); }
+    87%, 100% { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pendulum-item {
+        animation: none;
+    }
+}
+
+/* ---------- exit animation: heads level up, then every figure swings the same arc and lifts off ---------- */
+
+@keyframes exit-level {
+    from { translate: 0 0; }
+    to { translate: 0 var(--level-shift); }
+}
+
+@keyframes exit-swing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-32deg); }
+}
+
+@keyframes exit-lift {
+    from { translate: 0 var(--level-shift); }
+    to { translate: 0 calc(var(--level-shift) - 110%); }
+}
+
+@keyframes exit-title {
+    from { translate: 0 0; }
+    to { translate: 0 -25vw; }
+}
+
+.stage.is-leaving .pendulum-item,
+.stage.is-leaving .cradle-boy,
+.stage.is-leaving .cradle-girl {
+    animation: exit-level 0.15s ease-out 0s forwards, exit-swing 0.35s ease-out 0.1s forwards, exit-lift 0.5s ease-in 0.3s forwards;
+}
+
+/* head level 632, common pendulum length */
+.stage.is-leaving .cradle-boy {
+    --level-shift: 1.4144vw;
+    transform-origin: 49.8% -5.028%;
+}
+
+/* head level 676, common pendulum length */
+.stage.is-leaving .pendulum-blonde {
+    --level-shift: -0.8772vw;
+    transform-origin: 46.1% 36.3591%;
+}
+
+/* head level 661, common pendulum length */
+.stage.is-leaving .pendulum-dog {
+    --level-shift: -0.096vw;
+    transform-origin: 52% 37.689%;
+}
+
+/* head level 659, common pendulum length */
+.stage.is-leaving .pendulum-moustache {
+    --level-shift: 0.0082vw;
+    transform-origin: 50.3% 36.1552%;
+}
+
+/* head level 659, common pendulum length */
+.stage.is-leaving .pendulum-pig {
+    --level-shift: 0.0082vw;
+    transform-origin: 51% 35.4074%;
+}
+
+/* head level 653.1, common pendulum length */
+.stage.is-leaving .pendulum-cat {
+    --level-shift: 0.3155vw;
+    transform-origin: 50.9% 28.5337%;
+}
+
+/* head level 674, common pendulum length */
+.stage.is-leaving .cradle-girl {
+    --level-shift: -0.7731vw;
+    transform-origin: 49.8% 0.6457%;
+}
+
+.stage.is-leaving .home-title {
+    animation: exit-title 0.5s ease-in 0.3s forwards;
+}
+
+.stage.is-leaving .question-card {
+    pointer-events: none;
+}

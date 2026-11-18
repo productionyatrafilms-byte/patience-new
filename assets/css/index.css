@@ -1,0 +1,143 @@
+/* index.html - landing / progress (frames 1:2 and 3:2470) */
+
+:root {
+    --page-purple: #372750;
+    --title-shadow: #ffdc90;
+    --loading-cream: #fffcd7;
+    --bar-white: #ffffff;
+    --bar-green: #35e86b;
+}
+
+body {
+    background-color: var(--page-purple);
+}
+
+.landing-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.landing-mascot {
+    position: absolute;
+    left: 39.7396%;
+    top: 31.0185%;
+    width: 20.5208%;
+    height: auto;
+    display: block;
+}
+
+.landing-title {
+    text-shadow: 0.1562vw 0.2604vw 0 var(--title-shadow);
+}
+
+.landing-status {
+    position: absolute;
+    left: 0;
+    top: 80.3519%;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-family: "Irish Grover", sans-serif;
+    font-weight: 400;
+    font-size: 3.3333vw;
+    line-height: 4.0313vw;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--loading-cream);
+}
+
+/* ---------- Loading component (3:1250, 781 x 102) ---------- */
+
+.progress {
+    position: absolute;
+    left: 29.6875%;
+    top: 69.8148%;
+    width: 40.6771%;
+    height: auto;
+}
+
+.progress-bar {
+    box-sizing: border-box;
+    width: 86.6837%;
+    display: flex;
+    gap: 0.5208vw;
+    padding: 0.3646vw 0.4688vw 0.4167vw;
+    background-color: var(--bar-white);
+    border: 0.2083vw solid var(--accent-purple);
+    border-radius: 1.0417vw;
+    line-height: 0;
+}
+
+.progress-segment {
+    width: 2.9167vw;
+    height: auto;
+    aspect-ratio: 56 / 79;
+    display: block;
+    background-color: var(--bar-green);
+    visibility: hidden;
+}
+
+.progress-segment-start {
+    border-radius: 0.3646vw 0 0 0.3646vw;
+}
+
+.progress-segment-end {
+    border-radius: 0 0.4688vw 0.4688vw 0;
+}
+
+.progress-segment.is-filled {
+    visibility: visible;
+}
+
+.progress-percent {
+    position: absolute;
+    left: 96.927%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-family: "Irish Grover", sans-serif;
+    font-weight: 400;
+    font-size: 3.3333vw;
+    line-height: 4.0313vw;
+    white-space: nowrap;
+    color: var(--bar-white);
+}
+
+/* back arrow is only shown once the bar is full (frame 3:2470) */
+
+.back-btn {
+    visibility: hidden;
+}
+
+.stage.is-complete .back-btn {
+    visibility: visible;
+}
+
+/* little shaky effect on the "Loading...." text */
+
+.landing-status {
+    animation: loading-shake 0.6s linear infinite;
+}
+
+@keyframes loading-shake {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-0.05vw, 0.03vw) rotate(-0.3deg); }
+    20% { transform: translate(0.06vw, -0.04vw) rotate(0.35deg); }
+    30% { transform: translate(-0.04vw, -0.05vw) rotate(-0.2deg); }
+    40% { transform: translate(0.05vw, 0.04vw) rotate(0.3deg); }
+    50% { transform: translate(-0.06vw, 0.02vw) rotate(-0.35deg); }
+    60% { transform: translate(0.04vw, -0.03vw) rotate(0.2deg); }
+    70% { transform: translate(-0.03vw, 0.05vw) rotate(-0.3deg); }
+    80% { transform: translate(0.06vw, 0.02vw) rotate(0.25deg); }
+    90% { transform: translate(-0.05vw, -0.04vw) rotate(-0.2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .landing-status {
+        animation: none;
+    }
+}

@@ -1,0 +1,394 @@
+/* topic pages (define, when, rewards, why, how) - "What is Patience?" (frames 21:3212, 21:5287, 21:5569) */
+
+:root {
+    --photo-border: #fbc438;
+    --title-ink: #1e1e1e;
+    --title-pill-fill: rgba(255, 236, 126, 0.2);
+    --title-pill-border: #2e2e2c;
+    --caption-fill: rgba(255, 255, 255, 0.45);
+    --caption-border: #000000;
+    --rail-fill: #fefdff;
+    --rail-border: #494949;
+    --rail-active-fill: #404040;
+    --rail-active-border: #a3a3a3;
+}
+
+.define-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.home-btn {
+    position: absolute;
+    left: 3.2812%;
+    top: 4.3519%;
+    width: 3.125%;
+    height: auto;
+    line-height: 0;
+    z-index: 10;
+}
+
+.home-btn-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Title pill (TITLE 21:3521) ---------- */
+
+.define-title {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    top: 5%;
+    width: auto;
+    min-width: 35.4167%;
+    height: auto;
+    margin: 0;
+    padding: 0.9271vw 2.0833vw;
+    box-sizing: border-box;
+    background-color: var(--title-pill-fill);
+    border: 0.1562vw solid var(--title-pill-border);
+    border-radius: 1.9271vw;
+    font-family: "Irish Grover", sans-serif;
+    font-weight: 400;
+    font-size: 3.3333vw;
+    line-height: 4.0313vw;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--title-ink);
+}
+
+/* ---------- Photo slider (VIDOS 21:3527) ---------- */
+
+.photo-frame {
+    position: absolute;
+    left: 27.5521%;
+    top: 18.4259%;
+    width: 44.9479%;
+    height: auto;
+    line-height: 0;
+}
+
+.photo-spacer {
+    width: 100%;
+    height: auto;
+    display: block;
+    visibility: hidden;
+}
+
+.photo-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 3.8542vw;
+}
+
+.photo-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0.5729vw solid var(--photo-border);
+    border-radius: 3.8542vw;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ---------- Caption pill (TEXT BOX 21:3520) ---------- */
+
+.caption-box {
+    position: absolute;
+    left: 20.4167%;
+    top: 78.6111%;
+    width: 59.2188%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: var(--caption-fill);
+    border: 0.1042vw solid var(--caption-border);
+    border-radius: 4.2188vw;
+    overflow: hidden;
+    -webkit-backdrop-filter: blur(0.8vw) saturate(1.4);
+    backdrop-filter: blur(0.8vw) saturate(1.4);
+    box-shadow: inset 0 0.1vw 0.2vw rgba(255, 255, 255, 0.8), 0 0.4vw 1.2vw rgba(0, 0, 0, 0.15);
+}
+
+.caption-sizer {
+    padding: 1.6146vw 1.7708vw;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 2.0833vw;
+    line-height: 2.5vw;
+    visibility: hidden;
+}
+
+.caption-slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.caption-slide {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.7708vw;
+}
+
+.caption-text {
+    margin: 0;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 400;
+    font-size: 2.0833vw;
+    line-height: 2.5vw;
+    text-align: center;
+    color: #000000;
+}
+
+/* ---------- Arrows (R NEVIGATION) ---------- */
+
+.nav-btn {
+    position: absolute;
+    left: 76.3021%;
+    width: 5.625%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    line-height: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.06);
+}
+
+.nav-up {
+    top: 36.6667%;
+}
+
+.nav-down {
+    top: 54.0741%;
+}
+
+.nav-btn.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.nav-btn-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Topic rail: circle on top, pill slides out from behind it ---------- */
+
+.topic-btn {
+    position: absolute;
+    left: 3.2813%;
+    width: 5.2083vw;
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: none;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Irish Grover", sans-serif;
+    color: #000000;
+}
+
+.topic-btn:hover,
+.topic-btn:focus-visible,
+.topic-btn.is-open {
+    z-index: 6;
+}
+
+.topic-1 { top: 24.8148%; }
+.topic-2 { top: 35.0926%; }
+.topic-3 { top: 45.3704%; }
+.topic-4 { top: 55.6481%; }
+.topic-5 { top: 65.9259%; }
+
+.topic-circle {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    box-sizing: border-box;
+    background-color: var(--rail-fill);
+    border: 0.1042vw solid var(--rail-border);
+    border-radius: 50%;
+    box-shadow: 0 0.2083vw 0.2083vw rgba(0, 0, 0, 0.25);
+}
+
+.topic-btn.is-active .topic-circle {
+    background-color: var(--rail-active-fill);
+    border-color: var(--rail-active-border);
+}
+
+.topic-number {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.3333vw;
+    line-height: 4.0313vw;
+}
+
+.topic-pill {
+    position: absolute;
+    left: 0.2604vw;
+    top: 0.4167vw;
+    bottom: 0.4167vw;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 4.6875vw;
+    padding-left: 4.6875vw;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 0.1042vw solid #000000;
+    border-radius: 2.8385vw;
+    box-shadow: 0 0.2083vw 0.2083vw rgba(0, 0, 0, 0.25);
+}
+
+.topic-label {
+    display: block;
+    max-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 0;
+    white-space: nowrap;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1.25vw;
+    line-height: 1.5vw;
+    text-align: left;
+    transition: max-width 0.5s ease, padding 0.5s ease, opacity 0.35s ease 0.1s;
+}
+
+.topic-btn:hover .topic-label,
+.topic-btn:focus-visible .topic-label,
+.topic-btn.is-open .topic-label {
+    max-width: 27.0833vw;
+    padding-left: 0.625vw;
+    padding-right: 1.9792vw;
+    opacity: 1;
+}
+
+.topic-btn.is-active .topic-number {
+    color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .topic-label,
+    .nav-btn {
+        transition: none;
+    }
+}
+
+/* ---------- entry animation: title + photo drop in from above, caption rises from below ---------- */
+
+@keyframes enter-from-top {
+    from { transform: translateY(-40vw); }
+    to { transform: translateY(0); }
+}
+
+@keyframes enter-from-bottom {
+    from { transform: translateY(40vw); }
+    to { transform: translateY(0); }
+}
+
+.define-title {
+    animation: enter-from-top 0.9s cubic-bezier(0.22, 0.75, 0.25, 1) both;
+}
+
+.photo-frame {
+    animation: enter-from-top 1s cubic-bezier(0.22, 0.75, 0.25, 1) 0.1s both;
+}
+
+.caption-box {
+    animation: enter-from-bottom 0.9s cubic-bezier(0.22, 0.75, 0.25, 1) 0.2s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .define-title,
+    .photo-frame,
+    .caption-box {
+        animation: none;
+    }
+}
+
+/* ---------- Arrow to the Pranam page (last slide of the last topic) ---------- */
+
+.pranam-arrow {
+    position: absolute;
+    left: 74.1667%;
+    top: 69.4444%;
+    width: 9.375%;
+    height: auto;
+    line-height: 0;
+    z-index: 6;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    animation: pranam-arrow-bob 1.6s ease-in-out infinite;
+}
+
+.pranam-arrow.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.pranam-arrow-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pranam-arrow-label {
+    position: absolute;
+    left: 38%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 700;
+    font-size: 1.45vw;
+    line-height: 1.8vw;
+    color: #ffffff;
+    white-space: nowrap;
+    text-align: center;
+}
+
+@keyframes pranam-arrow-bob {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(0.625vw); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pranam-arrow {
+        animation: none;
+    }
+}
